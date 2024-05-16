@@ -1,8 +1,17 @@
+<script>
+    export let data
+    console.log(data)
+</script>
+
 <div class="menu">
+    {#if data?.user}
     <a href="/">Prímteszt</a>
     <a href="/cica">Cica oldala</a>
     <a href="/krokodil">Krokodil oldala</a>
+    <a href="/logout">Kijelentkezés</a>
+    {:else}
     <a href="/login">Login</a>
+    {/if}
 </div>
 <div class="slot">
     <slot/>    

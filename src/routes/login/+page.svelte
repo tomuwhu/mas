@@ -1,7 +1,8 @@
 <script>
-    export let form
+    export let data
+    console.log(data)
 </script>
-{#if !form?.success}
+{#if !data?.user}
 <form method="POST">
     <div><label for="mail">E-mail</label></div>
     <div><input type="email" name="mail" id="mail"/></div>
