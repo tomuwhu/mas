@@ -1,6 +1,5 @@
 <script>
     export let data
-    console.log(data)
 </script>
 {#if !data?.user}
 <form method="POST">
@@ -11,7 +10,7 @@
     <div><button type="submit">Bejelentkezés</button></div>
 </form>
 {:else}
-Bejelentkezve
+    Sikeresen bejelentkezve: {data?.user_name} ({data?.user})
 {/if}
 <style>
     form {

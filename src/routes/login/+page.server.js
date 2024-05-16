@@ -12,8 +12,8 @@ export const actions = {
 	}
 }
 export function load(event) {
-    console.log(event.locals)
 	return {
-		user: event.locals.user
+        user: event.cookies.get('user'),
+        user_name: event.cookies.get('user_name')
 	}
 }
